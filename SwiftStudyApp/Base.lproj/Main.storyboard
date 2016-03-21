@@ -98,17 +98,42 @@
                                             <segue destination="BYZ-38-t0r" kind="show" id="ZMV-dD-zil"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Term" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCU-iP-SOo">
-                                        <rect key="frame" x="108" y="96" width="324" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9U-cD-1A3" customClass="GeneralButton" customModule="SwiftStudyApp" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="421" width="340" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <state key="normal" title=" Next ">
+                                            <color key="titleColor" red="0.048125550070000002" green="0.405004323" blue="0.50598958329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeTerm:" destination="Vuk-Sr-AX1" eventType="touchUpInside" id="D4U-6a-Oaa"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXd-4h-KPN">
+                                        <rect key="frame" x="108" y="255" width="324" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCU-iP-SOo">
+                                        <rect key="frame" x="50" y="115" width="440" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                        <color key="textColor" red="0.73685897440000003" green="0.073481153480000005" blue="0.16779450200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.99488621389999998" blue="0.56293413250000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="AXd-4h-KPN" firstAttribute="centerX" secondItem="jk0-TO-xIC" secondAttribute="centerX" id="4Na-N7-LbM"/>
                                     <constraint firstAttribute="trailing" secondItem="nM7-KT-vhe" secondAttribute="trailing" constant="10" id="67a-WK-4Yx"/>
+                                    <constraint firstItem="AXd-4h-KPN" firstAttribute="centerY" secondItem="jk0-TO-xIC" secondAttribute="centerY" id="RBc-FQ-s8L"/>
+                                    <constraint firstAttribute="trailing" secondItem="OCU-iP-SOo" secondAttribute="trailing" constant="50" id="XBl-ea-o4M"/>
+                                    <constraint firstItem="OCU-iP-SOo" firstAttribute="leading" secondItem="jk0-TO-xIC" secondAttribute="leading" constant="50" id="aHF-CQ-O7t"/>
+                                    <constraint firstItem="A9U-cD-1A3" firstAttribute="top" secondItem="AXd-4h-KPN" secondAttribute="bottom" constant="125" id="c6Z-sg-ZqY"/>
                                     <constraint firstItem="nM7-KT-vhe" firstAttribute="top" secondItem="jk0-TO-xIC" secondAttribute="top" constant="10" id="cDN-Od-fZ3"/>
+                                    <constraint firstItem="OCU-iP-SOo" firstAttribute="centerX" secondItem="jk0-TO-xIC" secondAttribute="centerX" id="gUU-mC-W3B"/>
+                                    <constraint firstItem="OCU-iP-SOo" firstAttribute="top" secondItem="jk0-TO-xIC" secondAttribute="top" constant="115" id="iJ0-Do-p2Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="A9U-cD-1A3" secondAttribute="trailing" constant="100" id="rJO-vS-4Cf"/>
+                                    <constraint firstItem="A9U-cD-1A3" firstAttribute="leading" secondItem="jk0-TO-xIC" secondAttribute="leading" constant="100" id="z6F-Xb-GGd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -120,6 +145,10 @@
                             <constraint firstItem="jk0-TO-xIC" firstAttribute="leading" secondItem="i5g-eP-KSi" secondAttribute="leadingMargin" constant="10" id="yHb-Q3-rOs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="termLabel" destination="OCU-iP-SOo" id="8PT-gF-LnY"/>
+                        <outlet property="timerLabel" destination="AXd-4h-KPN" id="Zk2-gq-9ex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHy-Da-EPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

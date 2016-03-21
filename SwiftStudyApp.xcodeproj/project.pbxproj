@@ -17,6 +17,7 @@
 		9EC458311CA08EC80042C7DC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC458301CA08EC80042C7DC /* GameViewController.swift */; };
 		9EC458381CA096BB0042C7DC /* GeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC458371CA096BB0042C7DC /* GeneralButton.swift */; };
 		9EC4583C1CA0A0290042C7DC /* GeneralUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4583B1CA0A0290042C7DC /* GeneralUIView.swift */; };
+		9EC4583F1CA0C0D90042C7DC /* README in Resources */ = {isa = PBXBuildFile; fileRef = 9EC4583E1CA0C0D90042C7DC /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9EC458301CA08EC80042C7DC /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = SwiftStudyApp/GameViewController.swift; sourceTree = "<group>"; };
 		9EC458371CA096BB0042C7DC /* GeneralButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralButton.swift; sourceTree = "<group>"; };
 		9EC4583B1CA0A0290042C7DC /* GeneralUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralUIView.swift; sourceTree = "<group>"; };
+		9EC4583E1CA0C0D90042C7DC /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				9EC4583D1CA0A1400042C7DC /* UIObjectClasses */,
 				9EC457FE1CA07CB90042C7DC /* AppDelegate.swift */,
+				9EC4583E1CA0C0D90042C7DC /* README */,
 				9EC458321CA08EDC0042C7DC /* ViewControllers */,
 				9EC458021CA07CB90042C7DC /* Main.storyboard */,
 				9EC458051CA07CB90042C7DC /* Assets.xcassets */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC4583F1CA0C0D90042C7DC /* README in Resources */,
 				9EC458091CA07CB90042C7DC /* LaunchScreen.storyboard in Resources */,
 				9EC458061CA07CB90042C7DC /* Assets.xcassets in Resources */,
 				9EC458041CA07CB90042C7DC /* Main.storyboard in Resources */,
