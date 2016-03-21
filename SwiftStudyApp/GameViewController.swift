@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameViewController.swift
 //  SwiftStudyApp
 //
 //  Created by Katie on 3/21/16.
@@ -8,21 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class GameViewController: UIViewController {
+    
+    var timer = NSTimer()
+    var counter = 0
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func quit(sender: AnyObject) {
-        exit(0)
-    }
-
+    
 }
-
