@@ -200,13 +200,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe -&gt; for Right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-cA-iHh">
-                                        <rect key="frame" x="391" y="519.5" width="139" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="427" y="525" width="103" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe &lt;- for Wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUC-bF-cXl">
-                                        <rect key="frame" x="10" y="519" width="149.5" height="20.5"/>
+                                        <rect key="frame" x="10" y="525" width="110.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- : 0              + : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz0-kJ-PPu">
+                                        <rect key="frame" x="90" y="396" width="360" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -216,6 +222,8 @@
                                 <constraints>
                                     <constraint firstItem="AXd-4h-KPN" firstAttribute="centerX" secondItem="jk0-TO-xIC" secondAttribute="centerX" id="4Na-N7-LbM"/>
                                     <constraint firstAttribute="trailing" secondItem="nM7-KT-vhe" secondAttribute="trailing" constant="10" id="67a-WK-4Yx"/>
+                                    <constraint firstItem="mz0-kJ-PPu" firstAttribute="leading" secondItem="jk0-TO-xIC" secondAttribute="leading" constant="90" id="JUo-Wz-CTf"/>
+                                    <constraint firstItem="mz0-kJ-PPu" firstAttribute="top" secondItem="AXd-4h-KPN" secondAttribute="bottom" constant="100" id="NT0-Tm-OZs"/>
                                     <constraint firstItem="AXd-4h-KPN" firstAttribute="centerY" secondItem="jk0-TO-xIC" secondAttribute="centerY" id="RBc-FQ-s8L"/>
                                     <constraint firstAttribute="trailing" secondItem="OCU-iP-SOo" secondAttribute="trailing" constant="50" id="XBl-ea-o4M"/>
                                     <constraint firstItem="OCU-iP-SOo" firstAttribute="leading" secondItem="jk0-TO-xIC" secondAttribute="leading" constant="50" id="aHF-CQ-O7t"/>
@@ -225,6 +233,7 @@
                                     <constraint firstItem="OCU-iP-SOo" firstAttribute="top" secondItem="jk0-TO-xIC" secondAttribute="top" constant="115" id="iJ0-Do-p2Z"/>
                                     <constraint firstAttribute="bottom" secondItem="tUC-bF-cXl" secondAttribute="bottom" constant="10" id="oWo-Js-7Pp"/>
                                     <constraint firstAttribute="trailing" secondItem="LTv-cA-iHh" secondAttribute="trailing" constant="10" id="rAT-XV-1Gr"/>
+                                    <constraint firstAttribute="trailing" secondItem="mz0-kJ-PPu" secondAttribute="trailing" constant="90" id="rFR-s8-DR7"/>
                                     <constraint firstAttribute="bottom" secondItem="LTv-cA-iHh" secondAttribute="bottom" constant="10" id="sqa-Cw-R6l"/>
                                 </constraints>
                             </view>
@@ -238,6 +247,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="scoreLabel" destination="mz0-kJ-PPu" id="kG2-pg-BpR"/>
                         <outlet property="swipeView" destination="jk0-TO-xIC" id="hBD-Qn-zSe"/>
                         <outlet property="termLabel" destination="OCU-iP-SOo" id="8PT-gF-LnY"/>
                         <outlet property="timerLabel" destination="AXd-4h-KPN" id="Zk2-gq-9ex"/>
@@ -245,10 +255,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHy-Da-EPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="564"/>
+            <point key="canvasLocation" x="675" y="564"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZdC-ms-htP"/>
+        <segue reference="ZMV-dD-zil"/>
     </inferredMetricsTieBreakers>
 </document>

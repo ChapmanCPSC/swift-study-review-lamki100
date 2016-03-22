@@ -26,6 +26,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var termLabel: UILabel!
     @IBOutlet weak var swipeView: UIView!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +118,8 @@ class GameViewController: UIViewController {
             // update labels at the bottom
             
         }
+        // update score
+        self.scoreLabel.text = "- : \(self.wrongTerms)              + : \(self.rightTerms)"
         
         // change terms
         if (self.terms.count != 0)
