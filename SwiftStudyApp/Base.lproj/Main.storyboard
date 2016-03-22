@@ -20,7 +20,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrI-9f-EdW">
                                 <rect key="frame" x="30" y="30" width="540" height="550"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ua-2q-KND" customClass="GeneralButton" customModule="SwiftStudyApp" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="365" width="340" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <state key="normal" title="Review">
+                                            <color key="titleColor" red="0.048125550070000002" green="0.405004323" blue="0.50598958329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="fa2-1c-OLJ" kind="show" id="d5M-3b-Wn4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.99488621389999998" blue="0.56293413250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4Ua-2q-KND" secondAttribute="trailing" constant="100" id="HXw-lT-TL6"/>
+                                    <constraint firstItem="4Ua-2q-KND" firstAttribute="top" secondItem="vrI-9f-EdW" secondAttribute="top" constant="365" id="f4x-uF-6Kz"/>
+                                    <constraint firstItem="4Ua-2q-KND" firstAttribute="leading" secondItem="vrI-9f-EdW" secondAttribute="leading" constant="100" id="fzc-fV-2mH"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Swift!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYn-66-9Ue">
                                 <rect key="frame" x="95" y="105" width="410" height="78"/>
@@ -29,13 +46,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGu-Ci-mYC" customClass="GeneralButton" customModule="SwiftStudyApp" customModuleProvider="target">
-                                <rect key="frame" x="120" y="349" width="360" height="54"/>
+                                <rect key="frame" x="120" y="439" width="360" height="54"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.048125550070000002" green="0.405004323" blue="0.50598958329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="quit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntO-ct-LC9"/>
+                                    <action selector="quit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i8J-88-NDC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSK-DA-Q1r" customClass="GeneralButton" customModule="SwiftStudyApp" customModuleProvider="target">
@@ -63,7 +80,7 @@
                             <constraint firstItem="vrI-9f-EdW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="fFd-ni-AuG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MGu-Ci-mYC" secondAttribute="trailing" constant="100" id="fQx-My-qvy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lYn-66-9Ue" secondAttribute="trailing" constant="75" id="iYq-Sd-hiH"/>
-                            <constraint firstItem="MGu-Ci-mYC" firstAttribute="top" secondItem="xSK-DA-Q1r" secondAttribute="bottom" constant="25" id="kxe-A4-D8C"/>
+                            <constraint firstItem="MGu-Ci-mYC" firstAttribute="top" secondItem="xSK-DA-Q1r" secondAttribute="bottom" constant="115" id="kxe-A4-D8C"/>
                             <constraint firstItem="lYn-66-9Ue" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="ljs-C6-YZN"/>
                             <constraint firstItem="vrI-9f-EdW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-10" id="xvg-yt-mhB"/>
                         </constraints>
@@ -72,6 +89,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-47" y="564"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="CJJ-T2-Uqx">
+            <objects>
+                <viewController id="fa2-1c-OLJ" customClass="ReviewViewController" customModule="SwiftStudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RSF-hS-zd1"/>
+                        <viewControllerLayoutGuide type="bottom" id="HEX-N2-5ts"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JrC-iL-lda" customClass="GeneralUIView" customModule="SwiftStudyApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVH-az-DWM">
+                                <rect key="frame" x="30" y="30" width="540" height="550"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfK-Hi-70f" customClass="GeneralButton" customModule="SwiftStudyApp" customModuleProvider="target">
+                                        <rect key="frame" x="430" y="10" width="100" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <state key="normal" title=" Home ">
+                                            <color key="titleColor" red="0.048125550070000002" green="0.405004323" blue="0.50598958329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ZdC-ms-htP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYc-Ow-VBC" customClass="GeneralButton" customModule="SwiftStudyApp" customModuleProvider="target">
+                                        <rect key="frame" x="98" y="423" width="344" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <state key="normal" title=" Next ">
+                                            <color key="titleColor" red="0.048125550070000002" green="0.405004323" blue="0.50598958329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeTerm:" destination="Vuk-Sr-AX1" eventType="touchUpInside" id="c7F-iT-RDs"/>
+                                            <action selector="changeTerm:" destination="fa2-1c-OLJ" eventType="touchUpInside" id="cTR-SL-7dy"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-lC-ndf">
+                                        <rect key="frame" x="33" y="183" width="474" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <color key="textColor" red="0.73685897440000003" green="0.073481153480000005" blue="0.16779450200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.99488621389999998" blue="0.56293413250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HfK-Hi-70f" secondAttribute="trailing" constant="10" id="FhQ-xC-MEl"/>
+                                    <constraint firstItem="xYc-Ow-VBC" firstAttribute="leading" secondItem="wVH-az-DWM" secondAttribute="leadingMargin" constant="90" id="KjD-Xb-UpV"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Wxx-lC-ndf" secondAttribute="trailing" constant="25" id="O3n-MX-ezD"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="xYc-Ow-VBC" secondAttribute="trailing" constant="90" id="Qak-7N-cof"/>
+                                    <constraint firstItem="xYc-Ow-VBC" firstAttribute="top" secondItem="wVH-az-DWM" secondAttribute="topMargin" constant="415" id="X57-HK-mct"/>
+                                    <constraint firstItem="Wxx-lC-ndf" firstAttribute="leading" secondItem="wVH-az-DWM" secondAttribute="leadingMargin" constant="25" id="gzl-54-1fg"/>
+                                    <constraint firstItem="Wxx-lC-ndf" firstAttribute="top" secondItem="HfK-Hi-70f" secondAttribute="bottom" constant="125" id="hvz-Jl-dbN"/>
+                                    <constraint firstItem="HfK-Hi-70f" firstAttribute="top" secondItem="wVH-az-DWM" secondAttribute="top" constant="10" id="z6r-8b-ths"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wVH-az-DWM" firstAttribute="trailing" secondItem="JrC-iL-lda" secondAttribute="trailingMargin" constant="-10" id="0Ks-hc-FJo"/>
+                            <constraint firstItem="wVH-az-DWM" firstAttribute="top" secondItem="RSF-hS-zd1" secondAttribute="bottom" constant="10" id="N8q-Jn-wHM"/>
+                            <constraint firstItem="wVH-az-DWM" firstAttribute="leading" secondItem="JrC-iL-lda" secondAttribute="leadingMargin" constant="10" id="ba2-Xy-nyg"/>
+                            <constraint firstItem="HEX-N2-5ts" firstAttribute="top" secondItem="wVH-az-DWM" secondAttribute="bottom" constant="20" id="skE-Or-yDq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="termLabel" destination="Wxx-lC-ndf" id="Dvv-RD-u0W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ffj-hG-ZYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="1284"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="yCL-4l-eMk">
@@ -98,6 +187,12 @@
                                             <segue destination="BYZ-38-t0r" kind="show" id="ZMV-dD-zil"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCU-iP-SOo">
+                                        <rect key="frame" x="50" y="115" width="440" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                        <color key="textColor" red="0.73685897440000003" green="0.073481153480000005" blue="0.16779450200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9U-cD-1A3" customClass="GeneralButton" customModule="SwiftStudyApp" customModuleProvider="target">
                                         <rect key="frame" x="100" y="421" width="340" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
@@ -112,12 +207,6 @@
                                         <rect key="frame" x="108" y="255" width="324" height="40"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCU-iP-SOo">
-                                        <rect key="frame" x="50" y="115" width="440" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
-                                        <color key="textColor" red="0.73685897440000003" green="0.073481153480000005" blue="0.16779450200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -146,13 +235,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="swipeView" destination="jk0-TO-xIC" id="hBD-Qn-zSe"/>
                         <outlet property="termLabel" destination="OCU-iP-SOo" id="8PT-gF-LnY"/>
                         <outlet property="timerLabel" destination="AXd-4h-KPN" id="Zk2-gq-9ex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHy-Da-EPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="564"/>
+            <point key="canvasLocation" x="739" y="564"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZdC-ms-htP"/>
+    </inferredMetricsTieBreakers>
 </document>

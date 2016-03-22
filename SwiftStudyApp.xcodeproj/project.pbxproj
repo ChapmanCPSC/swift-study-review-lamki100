@@ -18,6 +18,7 @@
 		9EC458381CA096BB0042C7DC /* GeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC458371CA096BB0042C7DC /* GeneralButton.swift */; };
 		9EC4583C1CA0A0290042C7DC /* GeneralUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC4583B1CA0A0290042C7DC /* GeneralUIView.swift */; };
 		9EC4583F1CA0C0D90042C7DC /* README in Resources */ = {isa = PBXBuildFile; fileRef = 9EC4583E1CA0C0D90042C7DC /* README */; };
+		9EC458431CA0F0EA0042C7DC /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC458421CA0F0EA0042C7DC /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9EC458371CA096BB0042C7DC /* GeneralButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralButton.swift; sourceTree = "<group>"; };
 		9EC4583B1CA0A0290042C7DC /* GeneralUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralUIView.swift; sourceTree = "<group>"; };
 		9EC4583E1CA0C0D90042C7DC /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		9EC458421CA0F0EA0042C7DC /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = SwiftStudyApp/ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +109,12 @@
 			children = (
 				9EC4583D1CA0A1400042C7DC /* UIObjectClasses */,
 				9EC457FE1CA07CB90042C7DC /* AppDelegate.swift */,
+				9EC458401CA0D6650042C7DC /* Supported Files */,
 				9EC4583E1CA0C0D90042C7DC /* README */,
 				9EC458321CA08EDC0042C7DC /* ViewControllers */,
 				9EC458021CA07CB90042C7DC /* Main.storyboard */,
 				9EC458051CA07CB90042C7DC /* Assets.xcassets */,
 				9EC458071CA07CB90042C7DC /* LaunchScreen.storyboard */,
-				9EC4580A1CA07CB90042C7DC /* Info.plist */,
 			);
 			path = SwiftStudyApp;
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9EC458301CA08EC80042C7DC /* GameViewController.swift */,
+				9EC458421CA0F0EA0042C7DC /* ReviewViewController.swift */,
 				9EC458001CA07CB90042C7DC /* ViewController.swift */,
 			);
 			name = ViewControllers;
@@ -152,6 +155,14 @@
 				9EC4583B1CA0A0290042C7DC /* GeneralUIView.swift */,
 			);
 			name = UIObjectClasses;
+			sourceTree = "<group>";
+		};
+		9EC458401CA0D6650042C7DC /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EC4580A1CA07CB90042C7DC /* Info.plist */,
+			);
+			name = "Supported Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 			files = (
 				9EC458381CA096BB0042C7DC /* GeneralButton.swift in Sources */,
 				9EC458011CA07CB90042C7DC /* ViewController.swift in Sources */,
+				9EC458431CA0F0EA0042C7DC /* ReviewViewController.swift in Sources */,
 				9EC458311CA08EC80042C7DC /* GameViewController.swift in Sources */,
 				9EC4583C1CA0A0290042C7DC /* GeneralUIView.swift in Sources */,
 				9EC457FF1CA07CB90042C7DC /* AppDelegate.swift in Sources */,
