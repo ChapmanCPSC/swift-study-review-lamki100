@@ -14,9 +14,14 @@ class GameViewController: UIViewController {
     // variables for timer
     var timer = NSTimer()
     var seconds = 0
+    var running : Bool = false
     
     // variable for term
     var terms : [String] = []
+    
+    // keeping score
+    var rightTerms = 0
+    var wrongTerms = 0
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var termLabel: UILabel!
@@ -51,31 +56,13 @@ class GameViewController: UIViewController {
         self.seconds = 30
         self.timerLabel.text = "0:\(String(format: "%02d", seconds))"
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("subtractTime"), userInfo: nil, repeats: true)
+        
+        self.running = true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func changeTerm(sender: AnyObject) {
-        
-        if (self.terms.count != 0)
-        {
-            // set to first term
-            self.termLabel.text = terms.removeFirst()
-            
-            // reset timer
-            self.seconds = 30
-            self.timerLabel.text = "0:\(String(format: "%02d", seconds))"
-        }
-        else
-        {
-            // done pop up
-            self.termLabel.text = "WELL DONE"
-            self.timerLabel.text = "0:00"
-            self.timer.invalidate()
-        }
     }
     
     func subtractTime()
@@ -105,19 +92,49 @@ class GameViewController: UIViewController {
     
     func handleSwipes(sender:UISwipeGestureRecognizer)
     {
+        if (!self.running)
+        {
+            return
+        }
+        
         // if its swiped left
         if (sender.direction == .Left)
         {
-            print("Swipe Left")
             let labelPosition = CGPointMake(self.swipeView.frame.origin.x - 50.0, self.swipeView.frame.origin.y);
             swipeView.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeView.frame.size.width, self.swipeView.frame.size.height)
+            
+            self.wrongTerms += 1
+            // update labels at the bottom
+            
         }
         // if it is swiped right
         if (sender.direction == .Right)
         {
-            print("Swipe Right")
             let labelPosition = CGPointMake(self.swipeView.frame.origin.x + 50.0, self.swipeView.frame.origin.y);
             swipeView.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeView.frame.size.width, self.swipeView.frame.size.height)
+            
+            self.rightTerms += 1
+            // update labels at the bottom
+            
+        }
+        
+        // change terms
+        if (self.terms.count != 0)
+        {
+            // set to first term
+            self.termLabel.text = terms.removeFirst()
+            
+            // reset timer
+            self.seconds = 30
+            self.timerLabel.text = "0:\(String(format: "%02d", seconds))"
+        }
+        else
+        {
+            // done pop up
+            self.termLabel.text = "WELL DONE"
+            self.timerLabel.text = "0:00"
+            self.timer.invalidate()
+            self.running = false
         }
     }
     
