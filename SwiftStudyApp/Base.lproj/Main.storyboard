@@ -217,13 +217,22 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Response Time : 0s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-yp-5CL">
+                                        <rect key="frame" x="45" y="447" width="450" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.99488621389999998" blue="0.56293413250000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="AXd-4h-KPN" firstAttribute="centerX" secondItem="jk0-TO-xIC" secondAttribute="centerX" id="4Na-N7-LbM"/>
                                     <constraint firstAttribute="trailing" secondItem="nM7-KT-vhe" secondAttribute="trailing" constant="10" id="67a-WK-4Yx"/>
+                                    <constraint firstItem="OKJ-yp-5CL" firstAttribute="leading" secondItem="jk0-TO-xIC" secondAttribute="leading" constant="45" id="H7J-Pe-J4N"/>
                                     <constraint firstItem="mz0-kJ-PPu" firstAttribute="leading" secondItem="jk0-TO-xIC" secondAttribute="leading" constant="90" id="JUo-Wz-CTf"/>
+                                    <constraint firstItem="OKJ-yp-5CL" firstAttribute="top" secondItem="mz0-kJ-PPu" secondAttribute="bottom" constant="30" id="KWU-OA-LjZ"/>
                                     <constraint firstItem="mz0-kJ-PPu" firstAttribute="top" secondItem="AXd-4h-KPN" secondAttribute="bottom" constant="100" id="NT0-Tm-OZs"/>
+                                    <constraint firstAttribute="trailing" secondItem="OKJ-yp-5CL" secondAttribute="trailing" constant="45" id="QI4-Xg-OMz"/>
                                     <constraint firstItem="AXd-4h-KPN" firstAttribute="centerY" secondItem="jk0-TO-xIC" secondAttribute="centerY" id="RBc-FQ-s8L"/>
                                     <constraint firstAttribute="trailing" secondItem="OCU-iP-SOo" secondAttribute="trailing" constant="50" id="XBl-ea-o4M"/>
                                     <constraint firstItem="OCU-iP-SOo" firstAttribute="leading" secondItem="jk0-TO-xIC" secondAttribute="leading" constant="50" id="aHF-CQ-O7t"/>
@@ -247,6 +256,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="averageResponseTimeLabel" destination="OKJ-yp-5CL" id="y1w-6e-VZG"/>
                         <outlet property="scoreLabel" destination="mz0-kJ-PPu" id="kG2-pg-BpR"/>
                         <outlet property="swipeView" destination="jk0-TO-xIC" id="hBD-Qn-zSe"/>
                         <outlet property="termLabel" destination="OCU-iP-SOo" id="8PT-gF-LnY"/>

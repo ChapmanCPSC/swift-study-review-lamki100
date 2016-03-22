@@ -22,11 +22,14 @@ class GameViewController: UIViewController {
     // keeping score
     var rightTerms = 0
     var wrongTerms = 0
+    var allTimes : [Int] = []
+    var numValuesDone = 0
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var termLabel: UILabel!
     @IBOutlet weak var swipeView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var averageResponseTimeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,8 +108,6 @@ class GameViewController: UIViewController {
             swipeView.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeView.frame.size.width, self.swipeView.frame.size.height)
             
             self.wrongTerms += 1
-            // update labels at the bottom
-            
         }
         // if it is swiped right
         if (sender.direction == .Right)
@@ -115,11 +116,17 @@ class GameViewController: UIViewController {
             swipeView.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeView.frame.size.width, self.swipeView.frame.size.height)
             
             self.rightTerms += 1
-            // update labels at the bottom
             
+            // update average time
+            let curDifTime = 30 - seconds
+            allTimes.append(curDifTime)
+            numValuesDone += 1
         }
         // update score
         self.scoreLabel.text = "- : \(self.wrongTerms)              + : \(self.rightTerms)"
+        
+        // update average response time
+        self.averageResponseTimeLabel.text = "Average Response Time : \(calculateAverage())s"
         
         // change terms
         if (self.terms.count != 0)
@@ -139,6 +146,17 @@ class GameViewController: UIViewController {
             self.timer.invalidate()
             self.running = false
         }
+    }
+    
+    func calculateAverage() -> Int
+    {
+        var total = 0
+        for value in self.allTimes
+        {
+            total += value
+        }
+        let averageTime = total / numValuesDone
+        return averageTime
     }
     
 }
