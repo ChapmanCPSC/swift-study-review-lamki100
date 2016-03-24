@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
     var rightTerms = 0
     var wrongTerms = 0
     var allTimes : [Int] = []
-    var numValuesDone = 0
+    var numValuesDone : Int = 0
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var termLabel: UILabel!
@@ -118,9 +118,10 @@ class GameViewController: UIViewController {
             self.rightTerms += 1
             
             // update average time
-            let curDifTime = 30 - seconds
+            // make it 31 so that if someone swipes right away, 30 counts as a second
+            let curDifTime = 31 - seconds
             allTimes.append(curDifTime)
-            numValuesDone += 1
+            self.numValuesDone += 1
         }
         // update score
         self.scoreLabel.text = "- : \(self.wrongTerms)              + : \(self.rightTerms)"
@@ -155,7 +156,17 @@ class GameViewController: UIViewController {
         {
             total += value
         }
-        let averageTime = total / numValuesDone
+        
+        let averageTime : Int = {
+            if (self.numValuesDone == 0)
+            {
+                 return 0
+            }
+            else
+            {
+                return total / self.numValuesDone
+            }
+        }()
         return averageTime
     }
     
