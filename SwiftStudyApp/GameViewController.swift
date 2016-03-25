@@ -35,8 +35,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(GameViewController.handleSwipes(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(GameViewController.handleSwipes(_:)))
         
         leftSwipe.direction = .Left
         rightSwipe.direction = .Right
@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
         // start timer
         self.seconds = 30
         self.timerLabel.text = "0:\(String(format: "%02d", seconds))"
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("subtractTime"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(GameViewController.subtractTime), userInfo: nil, repeats: true)
         
         self.running = true
     }
